@@ -1,0 +1,20 @@
+digraph Tree {
+node [shape=box] ;
+0 [label="FICO Score <= 659.5\ngini = 0.5\nsamples = 150302\nvalue = [75066, 75236]\nclass = T"] ;
+1 [label="gini = 0.076\nsamples = 46002\nvalue = [44194, 1808]\nclass = F"] ;
+0 -> 1 [labeldistance=2.5, labelangle=45, headlabel="True"] ;
+2 [label="Debt-to-Income Ratio <= 0.305\ngini = 0.417\nsamples = 104300\nvalue = [30872, 73428]\nclass = T"] ;
+0 -> 2 [labeldistance=2.5, labelangle=-45, headlabel="False"] ;
+3 [label="Request Amount <= 25500.0\ngini = 0.338\nsamples = 91427\nvalue = [19678, 71749]\nclass = T"] ;
+2 -> 3 ;
+5 [label="gini = 0.308\nsamples = 80599\nvalue = [15331, 65268]\nclass = T"] ;
+3 -> 5 ;
+6 [label="gini = 0.481\nsamples = 10828\nvalue = [4347, 6481]\nclass = T"] ;
+3 -> 6 ;
+4 [label="Debt-to-Income Ratio <= 0.345\ngini = 0.227\nsamples = 12873\nvalue = [11194, 1679]\nclass = F"] ;
+2 -> 4 ;
+7 [label="gini = 0.465\nsamples = 4043\nvalue = [2560, 1483]\nclass = F"] ;
+4 -> 7 ;
+8 [label="gini = 0.043\nsamples = 8830\nvalue = [8634, 196]\nclass = F"] ;
+4 -> 8 ;
+}
